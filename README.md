@@ -206,6 +206,4 @@ I created masks the for all deal sizes then made new data frames with only those
 
 - We have missed out on $56,959.39 overall due to the difference of MSRP to our actual sale price.
 
-- Our top selling country is USA, it also where we are losing the most money at.
-
 - It is odd that we have not tapped into the Latin American market, or at least Mexico (since we are selling to Canada already we have the NAFTA advantage)
