@@ -16,6 +16,9 @@ This was taken by grabbing the mean of the "Quantity Ordered" Column.
 
 - Classic cars, Product Code: S18_3232
 - This comprises 2.9% of our total sales & 1.8% of our total inventory ordered for 2003-2005
+
+
+
 - Found by grouping by "Product Line" & "Product Code" then sorting the dataframe by the "Sales" column.
 
 **What was our strongest sales period by volume? By value?**
@@ -185,50 +188,19 @@ Deals range from $482.13 - $2,999.97, they make up **26.3%** of total deal sales
     
 I created masks the for all deal sizes then made new data frames with only those values. I then used .describe() to grab summary metrics for all new deal size data frames.
 
+
+### Summary Statistics:
+
+![Large Deal stats](/images/Large_deals_summary_Statistics.png)
+![Medium Deal stats](/images/Medium_deals_summary_statistics.png)
+![Small Deal stats](/images/Small_deals_summary_statistics.png)
+
+
 ### Observations:
 
 - We have missed out on $56,959.39 overall due to the difference of MSRP to our actual sale price.
 
-- Our top selling country is USA, it also where we are losing the most money at currently based.  
+- Our top selling country is USA, it also where we are losing the most money at.
 
-- It is odd that we have not tapped into the Latin American market, or at least Mexico (since we are selling to Canada already they have the NAFTA advantage).
-
-- 
---
-
-### Data Dictionary
-
-
-|Feature|Type|Dataset|Description|
-|---|---|---|---|
-|Bill Count |int64|TouchBistro|number of bills.|
-|Voids|float64|TouchBistro|items that are NOT made, there is no increase or decrease of revenue. |
-|Gross Sales|float64|TouchBistro|total revenue made without the deduction of voids or discounts.|
-|Discounts|float64|TouchBistro|items that ARE made and sold at reduced price.|
-|Menu Item Cost| float64|TouchBistro|total cost of raw perishable goods ordered directly from vendors at wholesale prices.|
-|Labor Cost|float64|TouchBistro|total labor cost.|
-
----
-
-## Conclusion
-
-In conclusion our strongest Quarter is 4 and November our top sales month. Our top selling product is Classic cars, Product Code: S18_3232. This followed by 
-
-## Recommendations & Next Steps
-
-Total Prime costs are on average 20% over the suggested budget.
-The main culprit is BOH labor and food costs.
-The chef needs to be under weekly budget reviews for his food and labor costs.
-Cross train back of house staff to work different stations so there are not more staff than needed. 
-The budgets in the mean time will be based on the Previous week’s sales till a proper out of sample model can be provided.
-
-- Total prime less than 50%
-- Food cost 20% MAX
-- Labor cost BOH 15% MAX
-- Labor cost FOH 12 % MAX
-
-For the business they should look at different vendors and request price sheets to compare to current ones. Look into payment plans for vendor accounts to aid in recouping costs. Although BOH labor and food costs seem to be the main issues, if I could gain access to the P & L report it would be helpful to see where other areas could be improved upon. They might consider opening earlier than 3PM to capture the lunch crowd and launch a happy hour program along with a cocktail menu. If they paid for a liquor license, they should be using it. Beverage programs have a higher profit margin than food and with a properly implemented program it could increase sales up to 5-10 K a week. Look into third party delivery services such as seamless to add a new revenue streams. When I do get my out of sample working I can use the same functions above to calcuate the custom budgets. For the out of sample model Gather more data. Log transform data, I tried this on in sample data for modeling and it was not useful but might be for this model. Try out another model like an RNN that can be utilized on Time Series data.
-
-
-
+- It is odd that we have not tapped into the Latin American market, or at least Mexico (since we are selling to Canada already we have the NAFTA advantage)
 
